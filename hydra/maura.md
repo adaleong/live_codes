@@ -1,4 +1,41 @@
+CTRL SHIFT ENTER
 
+
+// ## INTR) · · ────── ꒰ঌ·✦·໒꒱ ────── · ·
+
+s0.initImage("https://i.imgur.com/DLMRUuc.png")
+src(s0).modulate(noise(1)).out(o0)
+
+// ## ONE · · ────── ꒰ঌ·✦·໒꒱ ────── · ·
+
+speed=1 // speed >
+shape(99,.15,.5).color(2,1,2)
+
+//.pixelate(100,100) //  3
+
+.diff( shape(900,.5,0).scrollX(.05).rotate( ()=>time/10 ).color(2,0,.75) )
+.diff( shape(900.4,.002).scrollX(.10).rotate( ()=>time/20 ).color(2,0,.75) )
+.diff( shape(900,.3,.002).scrollX(.15).rotate( ()=>time/30 ).color(4,0,.75) )
+.diff( shape(900,.2,.002).scrollX(.20).rotate( ()=>time/40 ).color(4,0,.75) )
+.diff( shape(900,.1,.002).scrollX(.25).rotate( ()=>time/50 ).color(5,0,.75) )
+
+.modulateScale(
+  shape(240,.5,0).scrollX(.05).rotate( ()=>time/20 )
+  , ()=>(Math.sin(time/3)*.2)+.2 )
+
+//.modulate(noise(3),0.005).blend(shape(4),0.01) // 1
+
+// .pixelate(80,80) // 2
+
+.scale(1.6,.6,1)
+.out()
+
+
+// ## TWO · · ────── ꒰ঌ·✦·໒꒱ ────── · ·
+
+
+
+# SET TWO
 
 speed = 1
 src(o0).modulate(noise(3),0.005).blend(shape(4),0.01)
